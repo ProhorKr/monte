@@ -1,0 +1,7 @@
+@import "core/config";
+@import '../../node_modules/normalize-scss/sass/normalize/import-now';
+
+.header{
+    width: 100%;
+    color: $blue;
+}

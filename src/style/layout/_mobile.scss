@@ -1,0 +1,10 @@
+.container{
+    @include container($containerMobile, $colCountMobile, $gridGapMobile);
+}
+
+.grid{        
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr repeat($colCountMobile, $colSize) 1fr;
+        column-gap: $gridGapMobile;
+}

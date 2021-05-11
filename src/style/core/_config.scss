@@ -1,0 +1,97 @@
+// USER VARIABLES SECTION
+//  Colors
+$blue: #1482fd;
+$not-white: #fbfbfb;
+$dark: #272838;
+$grey: #707180;
+$dark-grey: #333446;
+$charcoal-grey: #45454d;
+$red: #ed254e;
+$light-white: #f4f2f3;
+$green: #86ce08;
+$slate-grey: #555664;
+$white: #ffffff;
+
+// FONTS LOAD SECTION
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+// Text
+$textColor: $grey; 
+$fontsize: 14px;
+$montserat: 'Montserrat', sans-serif;
+
+// Containers
+$containerDesktop: 1160px;
+$sizeDesktop: 1260px;
+$colCountDesktop: 12;
+$containerTablet: 620px;
+$sizeTablet: 660px;
+$colCountTablet: 8;
+$containerMobile: 300px;
+$colCountMobile: 4;
+$colSize: 60px;
+$gridGap: 40px;
+$gridGapMobile: 20px;
+
+@mixin container($containerSize, $countCols, $gap){
+    max-width: $containerSize;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat($countCols, $colSize);
+    column-gap: $gap;
+    align-items: center;
+}
+
+@mixin media-tablet{
+    @media (min-width: $sizeTablet){
+        @content;
+    }
+}
+
+@mixin media-desktop{
+    @media screen and (min-width: $sizeDesktop){
+        @content;
+    }
+}
+
+// IMPORT SECTION
+
+@import '../../../node_modules/normalize-scss/sass/normalize/import-now'; // Normilize.css
+
+// GENERAL DOCUMENT STYLES
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $montserat;
+	font-size: $fontsize;
+    color: $textColor;
+    letter-spacing: 0.35px;
+    font-weight: 500;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;  
+    white-space: nowrap;  
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.page{
+
+    &--scrol-non{
+        overflow: hidden;
+        // padding-right: 15px;
+    }
+
+}
