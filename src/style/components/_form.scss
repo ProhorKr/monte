@@ -1,0 +1,51 @@
+.form{
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &__block{
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    &__label{
+        display: block;
+        font-size: 1.6rem;
+        color: $textDark;
+        margin-bottom: 1.5rem;
+    }
+
+    input{
+        background: #F1F1F1;
+        border-radius: 5px;
+        outline: none;
+        color: #999999;
+        padding: 1.4rem 1.2rem 1.1rem;
+        border: none;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+    select{
+        border-radius: 5px;
+        outline: none;
+        color: #999999;
+        padding: 1.4rem 1.2rem 1.1rem;
+        border: none;
+        width: 100%;
+        font-size: 1.6rem;
+        display: block;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-position: calc(100% - 1.6rem) 50%;
+        background-color: #F1F1F1;
+        background-image: url('../assets/formSelectArrow.svg');
+        background-repeat: no-repeat;
+
+
+        &:not([multiple]) {
+            padding: 1.4rem 1.2rem 1.1rem;
+            
+        }
+    }
+}
