@@ -76,12 +76,12 @@ module.exports = {
   entry: './scripts/index.js',
   output: {
     filename: `./js/${filename('js')}`,
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     clean: true,
     publicPath: '/',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'public'),
     publicPath: '/',
     open: true,
     watchContentBase: true,
