@@ -1,6 +1,7 @@
 .form{
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 1.2rem;
 
     &__block{
         margin-bottom: 3rem;
@@ -42,10 +43,10 @@
         background-image: url('../assets/formSelectArrow.svg');
         background-repeat: no-repeat;
 
+    }
 
-        &:not([multiple]) {
-            padding: 1.4rem 1.2rem 1.1rem;
-            
-        }
+    &__politic{
+        font-size: 1.4rem;
+        color: $textLight100;
     }
 }

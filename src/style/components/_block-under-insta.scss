@@ -1,0 +1,23 @@
+.block-under-insta{
+    background: #373737;
+    margin-top: -18rem;
+    padding-top: 20rem;
+
+    .container{
+        padding-bottom: 6rem;
+    }
+
+    &__title{
+        margin-top: 0;
+        color: white;
+        margin-bottom: 3rem;
+    }
+
+    &__text{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 3rem;
+        margin-bottom: 3.5rem;
+    }
+}
