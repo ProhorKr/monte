@@ -1,0 +1,38 @@
+@import "timer/countdownTimer";
+
+.timer{
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.35) 135.77%),
+    url('../assets/bg_timer.jpg');
+    background-size: cover;
+    padding-bottom: 4rem;
+
+    &__text{
+        font-size: 1.6rem;
+        line-height: 140%;
+        text-align: center;
+        color: $textNormal;
+        margin-top: 1.2rem;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__countdown{
+        margin-top: 2.5rem;
+    }
+
+    &__block-img{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: 200px;
+        margin-bottom: 3.5rem;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

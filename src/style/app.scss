@@ -1,7 +1,14 @@
 @import "core/config";
-@import '../../node_modules/normalize-scss/sass/normalize/import-now';
+@import '~normalize.css';
+@import '~swiper/swiper-bundle.css';
 
-.header{
-    width: 100%;
-    color: $blue;
-}
+@import "layout/module";
+
+@import "components/header",
+        "components/utp",
+        "components/timer",
+        "components/catalog",
+        "components/why",
+        "components/our-works",
+        "components/calc";
+

@@ -1,0 +1,17 @@
+@import 'why/advantages';
+.why{
+    background: url('../assets/backWhy.jpg') no-repeat,
+                linear-gradient(169.23deg, #FFFFFF 49.55%, rgba(255, 255, 255, 0) 159.72%);
+    background-size: cover;
+    padding-bottom: 3rem;
+
+    &__title{
+        margin-bottom: 30px;
+
+        &--pink{
+            color: $primary;
+        }
+    }
+
+}
+

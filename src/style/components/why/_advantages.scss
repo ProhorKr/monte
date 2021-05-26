@@ -1,0 +1,30 @@
+.advantages{
+    border: 2px solid #D4D4D4;
+    width: 100%;
+    background: rgba($color: #fff, $alpha: 0.8);
+
+
+    &__item{
+        width: 100%;
+        padding: 2.5rem 2.4rem;
+        display: grid;
+        grid-template-columns: 40px 165px;
+        grid-gap: 28px;
+        align-items: center;
+        border-bottom: 2px solid #D4D4D4;
+
+        &:last-child{
+            border-bottom: none;
+        }
+
+        img{
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+}

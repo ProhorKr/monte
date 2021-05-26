@@ -1,12 +1,5 @@
 @media (min-width: $sizeTablet){
     .container{
-        @include container($containerTablet, $colCountTablet, $gridGapMobile);
-    }
-
-    .grid{        
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr repeat($colCountTablet, $colSize) 1fr;
-        column-gap: $gridGapMobile;
+        @include container($containerTablet);
     }
 }

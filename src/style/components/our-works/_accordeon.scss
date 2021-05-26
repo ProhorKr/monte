@@ -1,0 +1,60 @@
+.accordeon{
+
+    label{
+        display: flex;
+        height: 80px;
+        align-items: center;
+        font-size: 2rem;
+        color: #383838;
+        cursor: pointer;
+        border: 1px solid rgba($color: #000, $alpha: 0.25);
+
+        &:not(:first-child){
+            border-top: none;
+        }
+    }
+
+    .panel{
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + .panel {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 2rem;
+    }
+
+    .container{
+        position: relative;
+    }
+
+    &__label-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after{
+            content: '';
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba($color: #000000, $alpha: 0.25);
+            border-radius: 50%;
+            background: url('../assets/accordeonArrowTop.svg') no-repeat center center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &--active.accordeon__label-text::after{
+            transform: rotate(-180deg);
+        }
+    }
+    
+}

@@ -1,9 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack');
 
@@ -21,7 +19,7 @@ const optimization = () => {
 
   if (isProd) {
     configObj.minimizer = [
-      new OptimizeCssAssetWebpackPlugin(),
+      new CssMinimizerPlugin(),
       new TerserWebpackPlugin()
     ];
   }
@@ -29,23 +27,18 @@ const optimization = () => {
   return configObj;
 };
 
+process.on('warning', (warning) => {
+  console.log(warning.stack, ' DATA DEBUG');
+}); 
+
 const plugins = () => {
   const basePlugins = [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
-      filename: 'index.html',
-      title: 'Monte',
-      minify: {
-        collapseWhitespace: isProd
-      }
+      minify: isProd
     }),
     new MiniCssExtractPlugin({
       filename: `./css/${filename('css')}`
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist')}
-      ]
     }),
   ];
 
@@ -80,30 +73,29 @@ const plugins = () => {
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  mode: 'development',
   entry: './scripts/index.js',
   output: {
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '',
-    clean: true
+    clean: true,
+    publicPath: '/',
   },
   devServer: {
-    historyApiFallback: true,
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist'),
+    publicPath: '/',
     open: true,
-    compress: true,
-    hot: true,
-    port: 3000,
+    watchContentBase: true,
+    port: 8080,
   },
+  target: 'web',
   optimization: optimization(),
   plugins: plugins(),
   devtool: isProd ? false : 'source-map',
   module: {
     rules: [
       {
-        test: /\.html$/,
-        loader: 'html-loader',
+        test: /\.(html)$/,
+        use: ['html-loader']
       },
       {
         test: /\.css$/i,
@@ -114,7 +106,8 @@ module.exports = {
               hmr: isDev
             },
           },
-          'css-loader'
+          'css-loader',
+          'postcss-loader'
         ],
       },
       {
@@ -129,6 +122,7 @@ module.exports = {
             }
           },
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ],
       },

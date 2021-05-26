@@ -1,0 +1,8 @@
+.phone{
+    color: $textNormal;
+
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
+}

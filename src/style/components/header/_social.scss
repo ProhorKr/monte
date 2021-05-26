@@ -1,0 +1,18 @@
+.social{
+    display: flex;
+    justify-content: space-between;
+    width: 58px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    display: block;
+
+    &--instagram{
+        background-image: url('../assets/inst.svg');
+    }
+
+    &--whatsapp{
+        background-image: url('../assets/whatsapp.svg');
+    }
+}

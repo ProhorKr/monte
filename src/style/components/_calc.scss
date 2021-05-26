@@ -1,0 +1,25 @@
+@import 'calc/formCalc';
+
+.calc{
+    background: #575757;
+
+    .container{
+        padding: 3rem 0;
+    }
+
+    &__title{
+        color: white;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+
+    &__text-under-title{
+        color: white;
+        font-size: 2rem;
+        line-height: 150%;
+    }
+
+    &__form{
+        margin-top: 3rem;
+    }
+}

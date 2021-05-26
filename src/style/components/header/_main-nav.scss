@@ -1,0 +1,177 @@
+.main-nav{
+
+  &__open{
+    .main-nav__container{
+      opacity: 1;
+    }
+    .main-nav__toggle{
+      &::before,&::after{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 1px;
+        background-color: $textDark;
+        top: 1px;
+        right: 0;
+        box-shadow: none;
+      }
+      &::before{
+        transform-origin: right top;
+        transform: rotate(-45deg);
+        right: 5px;
+      }
+      &::after{
+        transform-origin: left top;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__close{
+    .main-nav__container{
+      opacity: 0;
+    }
+  }
+
+  &__container{
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 45px;
+    width: 100%;
+    min-height: calc(100vh - 45px);
+    background: $white;
+    transition: opacity .3s ease-in;
+    z-index: 100;
+  }
+
+  &__wrapper{
+    width: $containerMobile;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 45px);
+  }
+
+  &__wrapper-bottom{
+    margin-bottom: 3rem;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__mobile-close{
+    display: none;
+  }
+
+  &__list{
+    padding: 0;
+  }
+
+  &__item{
+    list-style: none;
+  }
+
+  &__link{
+    color: #414141;
+    text-decoration: none;
+    height: 62px;
+    padding: 2rem 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #DCDCDC;
+
+    &--special{
+      border: none;
+      font-size: 1.8rem;
+      position: relative;
+      padding-left: 5.7rem;
+      display: flex;
+      align-items: center;
+      padding-top: 3rem;
+
+      &-calc::before,&-architect::before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        display: block;
+        left: 0;
+      }
+
+      &-calc::before{
+        background-image: url('/assets/calc-zamer.svg');
+      }
+
+      &-architect::before{
+        background-image: url('/assets/architect.svg');
+      }
+    }
+  }
+
+  &__contacts-block{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contacts{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__time{
+    color: $textLight100;
+  }
+
+  &__phone{
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  &__social-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__socLink{
+    text-decoration: none;
+    color: #3C3C3C;
+  }
+
+  &__toggle{
+    width: 20px;
+    height: 15px;
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: $textDark;
+      top: 1px;
+      right: 0;
+      box-shadow: 0 11px 0 0 $textDark;
+      transition: 0.1s;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 1px;
+      background-color: $textDark;
+      top: 7px;
+      right: 0;
+      transition: 1s;
+    }
+  }
+  
+}
