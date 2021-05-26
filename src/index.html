@@ -389,44 +389,44 @@
         <div class="container">
             <h2 class="calc__title">Калькулятор</h2>
             <span class="calc__text-under-title">Рассчитайте за 1 минуту стоимость шкафа-купе или гардеробной системы и получите итоговую цену в смс</span>
-            < action="" class="calc__ ">
-                <div class="__block">
-                    <label for="_geometry_list" class="__label">Геометрия шкафа</label>
-                    <select name="geomery" id="_geometry_list">
+            <form action="" class="calc__form form">
+                <div class="form__block">
+                    <label for="form_geometry_list" class="form__label">Геометрия шкафа</label>
+                    <select name="geomery" id="form_geometry_list">
                         <option value="Прямой">Прямой</option>
                         <option value="Кривой">Кривой</option>
                         <option value="Средний">Средний</option>
                     </select>
                 </div>
-                <div class="__block">
-                    <label for="_inside-doors" class="__label">Наполнение дверей</label>
-                    <select name="inside-doors" id="_inside-doors">
+                <div class="form__block">
+                    <label for="form_inside-doors" class="form__label">Наполнение дверей</label>
+                    <select name="inside-doors" id="form_inside-doors">
                         <option value="ДСП">ДСП</option>
                         <option value="ЛДСП">ЛДСП</option>
                         <option value="Другое">Другое</option>
                     </select>
                 </div>
-                <div class="__block">
-                    <label for="_doodrs-col" class="__label">Количество дверей</label>
-                    <input type="text" name="doodrs-col" id="_doodrs-col" placeholder="1">    
+                <div class="form__block">
+                    <label for="form_doodrs-col" class="form__label">Количество дверей</label>
+                    <input type="text" name="doodrs-col" id="form_doodrs-col" placeholder="1">    
                 </div>
-                <div class="__block">
-                    <label for="_sizes" class="__label">Размер шкафа (в-ш-г)</label>
-                    <input type="text" name="sizes" id="_sizes" placeholder="230х100х150">    
+                <div class="form__block">
+                    <label for="form_sizes" class="form__label">Размер шкафа (в-ш-г)</label>
+                    <input type="text" name="sizes" id="form_sizes" placeholder="230х100х150">    
                 </div>
-                <div class="__block">
-                    <label for="_name" class="__label">Имя</label>
-                    <input type="text" name="name" id="_name" placeholder="">    
+                <div class="form__block">
+                    <label for="form_name" class="form__label">Имя</label>
+                    <input type="text" name="name" id="form_name" placeholder="">    
                 </div>
-                <div class="__block">
-                    <label for="_tel" class="__label">Телефон</label>
-                    <input type="tel" name="tel" id="_tel" placeholder="">    
+                <div class="form__block">
+                    <label for="form_tel" class="form__label">Телефон</label>
+                    <input type="tel" name="tel" id="form_tel" placeholder="">    
                 </div>        
-                <div class="__block">        
-                    <span class="__politic">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</span>
+                <div class="form__block">        
+                    <span class="form__politic">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</span>
                 </div>
                 <button type="submit" class="btn">расчитать стоимость</button>    
-            </>
+            </form>
         </div>        
     </section>
     <section class="block-insta insta">
