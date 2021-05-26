@@ -1,0 +1,39 @@
+.functions{
+    background: #F5F5F5;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+
+    .container{
+        padding-top: 4rem;
+    }
+
+    &__title{
+        margin-top: 0;
+        text-align: left;
+    }
+
+    hr{
+        margin: 2rem 0;
+    }
+
+    &__text{
+        font-size: 2rem;
+        line-height: 3rem;
+        color: $textNormal;
+    }
+
+    &__item{
+        margin-top: 3rem;
+
+        img{
+            max-width: 100%;
+            max-height: 350px;
+            margin-bottom: 1rem;
+        }
+
+        span{
+            font-size: 1.9rem;
+            line-height: 2.5rem;
+        }
+    }
+}

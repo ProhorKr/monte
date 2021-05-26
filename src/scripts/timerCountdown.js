@@ -38,5 +38,5 @@ function calcTime(dates) {
 }
 
 
-calcTime('2021-05-26')
+calcTime('2021-06-26')
 

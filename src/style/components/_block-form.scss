@@ -1,0 +1,22 @@
+.block-form{
+    background: #373737;
+
+    .container{
+        padding-bottom: 6rem;
+        padding-top: 5rem;
+    }
+
+    &__title{
+        margin-top: 0;
+        color: white;
+        margin-bottom: 3rem;
+    }
+
+    &__text{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 3rem;
+        margin-bottom: 3.5rem;
+    }
+}
