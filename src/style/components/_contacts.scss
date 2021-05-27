@@ -1,0 +1,39 @@
+.contacts{
+
+    .container{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    &__block-text{
+        background: #373737;
+
+    }
+
+    &__title{
+        margin-top: 0;
+        margin-bottom: 4rem;
+        color: white;
+    }
+
+    &__text-block{
+        display: grid;
+        grid-template-columns: 95px 235px;
+        grid-gap: 1.5rem;
+        color: white;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-top: 2rem;
+    }
+
+    &__text-descriptiton{
+        font-weight: bold;
+    }
+
+    .btn{
+        margin-top: 3.5rem;
+    }
+
+
+    
+}

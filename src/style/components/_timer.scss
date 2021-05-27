@@ -6,6 +6,10 @@
     background-size: cover;
     padding-bottom: 4rem;
 
+    &__title{
+        text-align: center;
+    }
+
     &__text{
         font-size: 1.6rem;
         line-height: 140%;

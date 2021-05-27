@@ -1,6 +1,11 @@
 .utp{
     position: relative;
     overflow: hidden;
+    background: #F8F8F8;
+
+    .container{
+        padding-bottom: 4.5rem;
+    }
 
     &__under-title{
         font-size: 1.8rem;
