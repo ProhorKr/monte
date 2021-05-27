@@ -159,7 +159,6 @@
       top: 1px;
       right: 0;
       box-shadow: 0 11px 0 0 $textDark;
-      transition: 0.1s;
     }
 
     &::after{
@@ -170,7 +169,6 @@
       background-color: $textDark;
       top: 7px;
       right: 0;
-      transition: 1s;
     }
   }
   
