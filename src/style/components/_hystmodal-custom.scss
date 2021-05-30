@@ -1,0 +1,23 @@
+.hystmodal{
+
+    &__wrap{
+        padding: 1.5rem;
+    }
+
+    &__window{
+        padding: 2rem;
+    }
+
+    .form{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__close{
+        background: url('../assets/closeModal.svg') no-repeat center center;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

@@ -82,6 +82,7 @@
     width: 100%;
     display: block;
     border-bottom: 1px solid #DCDCDC;
+    font-size: 1.6rem;
 
     &--special{
       border: none;
@@ -172,4 +173,11 @@
     }
   }
   
+}
+
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
 }

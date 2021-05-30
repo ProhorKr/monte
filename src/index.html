@@ -24,7 +24,7 @@
                 <div class="main-nav__container">
                     <div class="main-nav__wrapper">
                         <ul class="main-nav__list">
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
+                            <li class="main-nav__item"><a href="#our-works" class="main-nav__link">Наши работы</a></li>
                             <li class="main-nav__item"><a href="#" class="main-nav__link">Кухни на заказ</a></li>
                             <li class="main-nav__item"><a href="#" class="main-nav__link">Акция</a></li>
                             <li class="main-nav__item"><a href="#" class="main-nav__link">Цены</a></li>
@@ -160,6 +160,7 @@
             </div>
         </div>
     </section>
+    <span class="anchor" id="our-works"></span>
     <section class="our-works">
         <div class="container">
             <h2 class="our-works__title">Наши выполненные работы c 2009 года</h2>
@@ -387,6 +388,7 @@
             
         </div>
     </section>
+    <span class="anchor" id="calc"></span>
     <section class="calc">
         <div class="container">
             <h2 class="calc__title">Калькулятор</h2>
@@ -614,18 +616,45 @@
         </div>
     </footer>
     <section class="mobile-actions">
-        <a href="" class="mobile-actions__button">
+        <a href="#our-works" class="mobile-actions__button">
             <i class="mobile-actions__icon mobile-actions__icon--shkaf"></i>
             <span class="mobile-actions__link-text">Наши работы</span>
         </a>
-        <a href="" class="mobile-actions__button">
+        <a href="" class="mobile-actions__button" data-hystmodal="#myModal">
             <i class="mobile-actions__icon mobile-actions__icon--lineyka"></i>
-            <span class="mobile-actions__link-text">Архитекторам</span>
-        </a>
-        <a href="" class="mobile-actions__button">
-            <i class="mobile-actions__icon mobile-actions__icon--calc"></i>
             <span class="mobile-actions__link-text">Бесплатный замер</span>
         </a>
+        <a href="#calc" class="mobile-actions__button" >
+            <i class="mobile-actions__icon mobile-actions__icon--calc"></i>
+            <span class="mobile-actions__link-text">Расчет стоимости</span>
+        </a>
     </section>
+    <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div class="container">
+                    <h2>Вызвать замерщика</h2>
+                    <div class="modal__text">
+                        Мы свяжемся с вами для уточнения деталей в течение 5 минут, и наш дизайнер приедет к вам в любое удобное для вас время.
+                    </div>
+                    <form action="" class="modal form">
+                        <div class="form__block">
+                            <label for="form_name" class="form__label">Имя</label>
+                            <input type="text" name="name" id="form_name" placeholder="">    
+                        </div>
+                        <div class="form__block">
+                            <label for="form_tel" class="form__label">Телефон</label>
+                            <input type="tel" name="tel" id="form_tel" placeholder="">    
+                        </div>        
+                        <div class="form__block">        
+                            <span class="form__politic">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</span>
+                        </div>
+                        <button type="submit" class="btn">Оставить заявку</button>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

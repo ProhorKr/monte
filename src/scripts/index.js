@@ -4,4 +4,5 @@ import './mobileMenu'
 import './timerCountdown'
 import './carousel'
 import './accordeon'
+import './modal'
 

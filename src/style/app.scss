@@ -1,6 +1,7 @@
 @import "core/config";
 @import '~normalize.css';
 @import '~swiper/swiper-bundle.css';
+@import 'hystmodal.css';
 
 @import "layout/module";
 
@@ -20,7 +21,8 @@
         "components/partners",
         "components/contacts",
         "components/footer",
-        "components/mobile-actions"
+        "components/mobile-actions",
+        "components/hystmodal-custom"
         
         ;
 
