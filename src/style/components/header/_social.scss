@@ -2,17 +2,37 @@
     display: flex;
     justify-content: space-between;
     width: 58px;
+    
+    @include desk{
+        order: 3;
+        width: 84px;
+    }
 }
 .icon{
     width: 24px;
     height: 24px;
     display: block;
+    background-repeat: no-repeat;
+
+    @include desk{
+        width: 32px;
+        height: 32px;
+    }
 
     &--instagram{
         background-image: url('../assets/inst.svg');
+
+        &:hover{
+            background-image: url('../assets/inst_hover.svg');
+        }
+        
     }
 
     &--whatsapp{
         background-image: url('../assets/whatsapp.svg');
+
+        &:hover{
+            background-image: url('../assets/whatsapp_hover.svg'); 
+        }
     }
 }

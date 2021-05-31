@@ -2,6 +2,11 @@
     width: 60px;
     height: 21px;
 
+    @media screen and (min-width: $sizeDesktop) {
+        height: 63px;
+        width: 137px;
+    }
+
     &__img{
         width: 100%;
         height: 100%;

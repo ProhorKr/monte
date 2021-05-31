@@ -34,13 +34,13 @@ $containerMobile: 330px;
     align-items: center;
 }
 
-@mixin media-tablet{
+@mixin tablet{
     @media (min-width: $sizeTablet){
         @content;
     }
 }
 
-@mixin media-desktop{
+@mixin desk{
     @media screen and (min-width: $sizeDesktop){
         @content;
     }

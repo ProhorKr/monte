@@ -12,10 +12,15 @@
     top: 0;
     z-index: 10;
 
-    &__container{
+    @include desk{
+        height: 83px;
+    }
+
+
+    .container{
         display: flex;
         align-items: center;
-        height: 45px;
+        height: 100%;
         justify-content: space-between;
     }
 
@@ -32,6 +37,10 @@
             display: block;
             position: absolute;
             right: -.8rem;
+
+            @include desk{
+                display: none;
+            }
         }
     }
       

@@ -50,10 +50,11 @@
             border-radius: 50%;
             background: url('../assets/accordeonArrowTop.svg') no-repeat center center;
             transition: transform 0.3s ease-in-out;
+            transform: rotate(-180deg);
         }
 
         &--active.accordeon__label-text::after{
-            transform: rotate(-180deg);
+            transform: rotate(0);
         }
     }
     
