@@ -1,15 +1,40 @@
 .utp{
     position: relative;
     overflow: hidden;
-    background: #F8F8F8;
+
+    @include desk{
+        background: #fff 
+                linear-gradient(90deg, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 50%);   
+        height: calc(100vh - 65px);
+    }
 
     .container{
         padding-bottom: 4.5rem;
     }
 
+    &__title{
+
+        @include desk{
+            margin-top: 3%;    
+        }        
+    }
+
     &__under-title{
         font-size: 1.8rem;
         text-transform: uppercase;
+
+        @include desk{
+            font-size: 3.2rem;
+        }
+    }
+
+    &__flex-block{
+
+        @include desk{
+            display: flex;
+            margin-top: 5%;
+            justify-content: space-between;
+        }
     }
 
     &__img{
@@ -20,10 +45,27 @@
         margin-top: 3rem;
         margin-bottom: 3rem;
 
+        @include desk{
+            width: 710px;
+            height: 485px;
+            position: static;
+            order: 2;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
         img{
             max-width: 100%;
             max-height: 100%;
         }
+    }
+    
+    &__buttons-block{
+        flex-grow: 2;
+        padding-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__text-block{
@@ -32,7 +74,30 @@
         color: $textDark;
         width: 100%;
         margin-bottom: 2rem;
+
+        @include desk{
+            font-size: 2rem;
+            line-height: 3rem;
+            margin-bottom: 3rem;
+        }
     }
 
+    &__form-block{
+        display: none;
 
+        @include desk{
+            display: block;
+        }
+    }
+
+    &__special-link{
+
+        @include desk{
+            display: flex;
+        }
+    }
+
+    .btn{
+        width: 330px;
+    }
 }

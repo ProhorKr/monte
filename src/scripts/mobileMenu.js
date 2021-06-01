@@ -4,17 +4,20 @@ const menu = document.querySelector('.main-nav')
 const menuContainer = document.querySelector('.main-nav__container')
 const menuLinks = document.querySelectorAll('.main-nav__link')
 
-mobileMenuButton.addEventListener('click', elem => {
-    if (menu.classList.contains('main-nav__open')){
-        closeMenu()
-    } else{
-        openMenu()        
-    }
-})
+if(window.innerWidth < 1200){
+    mobileMenuButton.addEventListener('click', elem => {
+        if (menu.classList.contains('main-nav__open')){
+            closeMenu()
+        } else{
+            openMenu()        
+        }
+    })
 
-menuLinks.forEach(elem => {
-    elem.addEventListener('click', closeMenu)
-})
+    menuLinks.forEach(elem => {
+        elem.addEventListener('click', closeMenu)
+    })
+
+}
 
 function closeMenu(){
     menu.classList.toggle('main-nav__open')

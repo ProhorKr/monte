@@ -59,6 +59,7 @@
       position: static;
       min-height: auto;
       display: block;
+      background: transparent;
     }
   }
 
@@ -149,6 +150,15 @@
         left: 0;
       }
 
+      &:hover{
+        &-calc::before{
+          background-image: url('/assets/calc-zamer_hover.svg');
+        }
+
+        &-architect::before{
+          background-image: url('/assets/calc-zamer_hover.svg');
+        }
+      }
       &-calc::before{
         background-image: url('/assets/calc-zamer.svg');
       }

@@ -6,6 +6,10 @@
     background-size: cover;
     padding-bottom: 4rem;
 
+    @include desk{
+        background: url('../assets/bg_timer_desc.jpg');
+    }
+
     &__title{
         text-align: center;
     }
@@ -23,6 +27,10 @@
 
     &__countdown{
         margin-top: 2.5rem;
+
+        @include desk{
+            margin: 6rem auto;    
+        }
     }
 
     &__block-img{
@@ -34,9 +42,46 @@
         max-height: 200px;
         margin-bottom: 3.5rem;
 
+        @include desk{
+            max-height: none;
+            width: auto;
+        }
+
         img{
             max-width: 100%;
             max-height: 100%;
         }
     }
+
+    &__btn-mobile{
+        @include desk{
+            display: none;
+        }
+    }
+
+    &__block-form-img{
+
+        @include desk{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem;
+            min-height: 510px;
+        }        
+    }
+
+    &__form-title{
+        font-size: 3.2rem;
+        color: $textNormal;
+        text-align: center;
+    }
+
+    &__form-block{
+
+        @include desk{
+            width: 600px;
+            background: white;
+            padding: 6rem 5rem;
+        }        
+    }
+
 }

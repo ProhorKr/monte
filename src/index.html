@@ -11,7 +11,7 @@
         <div class="container">
             <div class="logo header__logo">
                 <picture>
-                    <source media="(min-width: 1260px)" srcset="assets/logo.svg" sizes="">
+                    <source media="(min-width: 1260px)" srcset="assets/logo.svg">
                     <img src="assets/logo_mobile.svg" alt="" class="logo__img"/>
                 </picture>
                 
@@ -59,23 +59,35 @@
         <div class="container">
             <h1 class="utp__title">Прозводство шкафов</h1>
             <span class="utp__under-title">По индивидуальным заказам</span>
-            <div class="utp__img">
-                <img src="assets/utp_img.jpg" alt="">
-            </div>
-            <div class="utp__text-block">
-                Изготовим, доставим и соберем<br>
-                мебель на заказ с гарантией<br>
-                от производителяза <strong>за 5 дней</strong>.
-            </div>
-            <button class="btn">Получить расчет стоимости</button>
+            <div class="utp__flex-block">
+                <div class="utp__img">
+                    <picture>
+                        <source media="(min-width: 1260px)" srcset="assets/utp_img_desk.jpg" sizes="">
+                        <img src="assets/utp_img.jpg" alt="">
+                    </picture>                    
+                </div>
+                <div class="utp__buttons-block">
+                    <div class="utp__action-block">
+                        <div class="utp__text-block">
+                            Изготовим, доставим и соберем<br>
+                            мебель на заказ с гарантией<br>
+                            от производителяза <strong>за 5 дней</strong>.
+                        </div>
+                        <button class="btn">Получить расчет стоимости</button>
+                    </div>
+                    <div class="utp__form-block">
+                        <a href="#" class="utp__special-link main-nav__link main-nav__link--special main-nav__link--special-calc">Вызвать замерщика</a>
+                        <a href="#" class="utp__special-link main-nav__link main-nav__link--special main-nav__link--special-architect">Архитекторам и дизайнерам</a>
+                    </div>
+                </div>
+            </div>            
         </div>
     </section>
     <section class="timer">
         <div class="container">
             <h2 class="timer__title">Внимание акция</h2>            
                 <span class="timer__text">
-                    Пуфик в подарок <br>
-                    к каждому заказу от 50000 ₽
+                    Пуфик в подарок к каждому заказу от 50000 ₽
                 </span>            
             <div class="timer__countdown countdown">
                 <div class="countdown__container">                
@@ -95,10 +107,30 @@
                     </div>
                 </div>
             </div>
-            <div class="timer__block-img">
-                <img src="assets/pufik.png" alt="">
+            <div class="timer__block-form-img">
+                <div class="timer__block-img">
+                    <picture>
+                        <source media="(min-width: 1260px)" srcset="assets/pufik_desc.png">
+                        <img src="assets/pufik.png" alt="">
+                    </picture>                
+                </div>
+                <div class="timer__form-block">
+                    <h3 class="timer__form-title">Заполните форму</h3>
+                    <form action="" class="form timer__form">
+                        <div class="form__block">
+                            <label for="form_timer-name" class="form__label">Имя</label>
+                            <input type="text" name="name" id="form_timer-name" placeholder="Иван">    
+                        </div>
+                        <div class="form__block">
+                            <label for="form_timer-phone" class="form__label">Телефон</label>
+                            <input type="tel" name="phone" id="form_timer-phone" placeholder="+7">    
+                        </div>
+                        <button type="submit" class="btn">получить предложение</button>   
+                    </form>
+                </div>
             </div>
-            <button class="btn">Получить Предложение</button>
+            
+            <button class="btn timer__btn-mobile">Получить Предложение</button>
         </div>
     </section>
     <section class="catalog">

@@ -105,6 +105,10 @@ h1{
     font-weight: normal;
     line-height: 120%;
     margin-bottom: 1rem;
+
+    @include desk{
+        font-size: 8rem;
+    }
 }
 
 h2{
@@ -115,4 +119,8 @@ h2{
     margin-top: 4rem;
     font-weight: normal;
     margin-bottom: 0;
+
+    @include desk{
+        font-size: 6rem;
+    }
 }
