@@ -1,0 +1,14 @@
+.order-calc-block{
+
+    @include desk{
+        display: flex;
+        flex-direction: column;   
+
+        #our-works{
+            order: 3
+        }
+        .our-works{
+            order:4
+        }
+    }
+}

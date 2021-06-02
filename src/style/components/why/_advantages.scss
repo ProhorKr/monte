@@ -3,6 +3,19 @@
     width: 100%;
     background: rgba($color: #fff, $alpha: 0.8);
 
+    @include desk{
+        display: grid;
+        grid-template-columns: repeat(3, 199px);
+        grid-template-rows: repeat(2, 200px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        align-items: center;
+        width: 600px;
+        margin-left: auto;
+        // grid-gap: 2px;
+    }
+
 
     &__item{
         width: 100%;
@@ -13,18 +26,71 @@
         align-items: center;
         border-bottom: 2px solid #D4D4D4;
 
+        @include desk{
+            display: grid;
+            grid-template-columns: 200px;
+            grid-template-rows: 100px 100px;
+            grid-gap: 0;
+            padding: 0;
+            border-right: inherit;
+            margin-right: -2px;
+            border-bottom: inherit;
+            margin-bottom: -2px;
+            justify-items: start;
+            align-items: start;
+        }
+
         &:last-child{
             border-bottom: none;
         }
 
         img{
-            min-width: 100%;
-            min-height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+
+            @include desk{
+                width: 40px;
+                height: 40px;
+                max-width: 0;
+                max-height: 0;
+                margin: 4rem 2.5rem 0;
+            }
+        }
+
+        &--special{
+            display: none;
+
+            @include desk{
+                display: flex;
+                background-color: $primary;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-evenly;
+                align-items: start;
+
+                .advantages__text{
+                    color: #fff;
+                    padding: 0;
+                    padding-left: 2.2rem;
+                }
+
+                .btn{
+                    background-color: #fff;
+                    color: $primary;
+                    height: 36px;
+                    width: 127px;
+                    margin-left: 2.5rem;
+                }
+            }
         }
     }
 
     &__text{
         font-size: 1.6rem;
         line-height: 120%;
+
+        @include desk{
+            padding: 2rem 2.4rem 3rem;
+        }
     }
 }

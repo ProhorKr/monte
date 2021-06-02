@@ -9,16 +9,30 @@
         cursor: pointer;
         border: 1px solid rgba($color: #000, $alpha: 0.25);
 
+        @include desk{
+            border: none;
+            // border-bottom: 1px solid rgba($color: #000, $alpha: 0.25);
+
+            &:first-child{
+                border-top: 1px solid rgba($color: #000, $alpha: 0.25);
+            }
+        }
+
         &:not(:first-child){
             border-top: none;
         }
     }
 
     .panel{
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
+        max-height: 0;
+        // visibility: hidden;
+        // opacity: 0;
+        transition: max-height 0.3s linear;
+        overflow: hidden;
+
+        @include desk{
+           border-bottom: 1px solid rgba($color: #000, $alpha: 0.25); 
+        }
     }
 
     input[type="checkbox"] {
@@ -26,9 +40,9 @@
     }
 
     input[type="checkbox"]:checked + .panel {
-        height: auto;
-        visibility: visible;
-        opacity: 1;
+        max-height: 7000px;
+        // visibility: visible;
+        // opacity: 1;
         padding-top: 2rem;
     }
 

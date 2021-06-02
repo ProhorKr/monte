@@ -1,15 +1,40 @@
 .insta{
 
+    @include desk{
+       background: #F5F5F5; 
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     &__title{
         text-align: center;
+
+        @include desk{
+           text-align: left; 
+        }
     }
 
     &__link{
         text-decoration: none;
         margin-top: 3rem;
+
+        @include desk{
+           max-width: 220px; 
+        }
     }
 
     &__block-telefon{
         z-index: 5;
+    }
+
+    &__text-block-desc{
+        @include desk{
+           max-width: 700px; 
+           margin-top: 13rem;
+        }
     }
 }

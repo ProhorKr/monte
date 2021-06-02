@@ -2,17 +2,85 @@
 
 .catalog{
 
+    @include desk{
+        background: #f8f8f8;
+    }
+
+    .container{
+        @include desk{
+            padding-top: 3rem;
+
+            .btn{
+                display: none;
+            }
+        }       
+        
+    }
+
     &__title{
         text-align: left;
+
+        @include desk{
+            display: block;
+            margin-left: auto;
+            width: 830px;
+        }
     }
 
     &__hr{
         margin-bottom: 2rem;
         margin-top: 2rem;
+
+        @include desk{
+            display: none;
+        }
+
+        &--desc{
+            display: block;
+            margin-bottom: 6rem;
+        }
     }
 
     &__text-under-title{
         font-size: 1.6rem;
+
+        @include desk{
+            display: none;
+        }
+
+        &--desc{
+            display: inline;
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__text-desc{
+        display: none;
+
+        @include desk{
+            display: block;
+        }
+
+        .btn{
+            display: none;
+
+            @include desk{
+                display: flex;
+                margin-top: 10rem;
+            }
+        }
+    }
+
+    &__slider-grid-container{
+
+        @include desk{
+            display: grid;
+            grid-template-columns: 1fr 830px;
+            column-gap: 4rem;
+            width: $containerDesktop;
+            margin: 0 auto;
+        }
     }
 
 }

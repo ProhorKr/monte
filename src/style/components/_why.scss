@@ -5,11 +5,38 @@
     background-size: cover;
     padding-bottom: 3rem;
 
+    .container{
+
+        @include desk{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    @include desk{
+        background: url('../assets/whyBg-desc.jpg') no-repeat;
+        background-size: cover;
+        padding-bottom: 10rem;
+    }
+
     &__title{
         margin-bottom: 30px;
 
+        @include desk{
+            margin-top: 7rem;
+            margin-right: 3rem;
+        }
+
         &--pink{
             color: $primary;
+        }
+    }
+
+    &__advantages{
+
+        @include desk{
+            margin-top: 15rem;
         }
     }
 
