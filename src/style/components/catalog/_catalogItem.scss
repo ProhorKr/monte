@@ -4,8 +4,8 @@
     width: 225px;
 
     @include desk{
-        width: 278px;
-        min-height: 460px;
+        max-width: 364px;
+        max-height: 460px;
     }
 
     &__img{
@@ -14,7 +14,7 @@
         margin-bottom: 2rem;
         
         @include desk{
-            height: 370px;
+            max-height: 370px;
         }
 
         img{

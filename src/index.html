@@ -546,6 +546,21 @@
             <h2 class="block-form__title">Заполните форму</h2>
             <div class="block-form__text">Рассчитайте за 1 минуту стоимость шкафа-купе или гардеробной системы и получите итоговую цену в смс</div>
             <button class="btn block-form__button">расчитать стоимость</button>
+            <form action="" class="form under-insta-form">
+                <div class="form__block">
+                    <label for="form_insta-name" class="form__label">Имя</label>
+                    <input type="text" name="name" id="form_insta-name" placeholder="Иван">    
+                </div>
+                <div class="form__block">
+                    <label for="form_insta-phone" class="form__label">Телефон</label>
+                    <input type="tel" name="phone" id="form_insta-phone" placeholder="+7">    
+                </div>
+                <div class="form__block">
+                    <button type="submit" class="btn">оставить заявку</button>
+                    <span class="form__polite">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</span>
+                </div>
+                   
+            </form>
         </div>
     </section>
     <section class="inside-door">
@@ -553,40 +568,63 @@
             <h2 class="inside-door__title">Наполнение дверей</h2>
             <span class="inside-door__under-title">Cделаем любое наполнение дверей, под любой вкус и стиль</span>
         </div>
-        <div class="swiper-container inside-door__swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide catalog-item">
-                    <div class="catalog-item__img">
-                        <img src="assets/catalog-item.jpg" alt="">
+        <div class="inside-door__slider-grid-container">
+            <div class="swiper-container inside-door__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door1-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Зеркало травмобезопасное
+                            класса м1</span>
                     </div>
-                    <span class="catalog-item__title">Зеркало травмобезопасное
-                        класса м1</span>
-                </div>
-                <div class="swiper-slide catalog-item">
-                    <div class="catalog-item__img">
-                        <img src="assets/catalog-item.jpg" alt="">
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door2-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
                     </div>
-                    <span class="catalog-item__title">Стекло с пленкой Oracle
-                    </span>
-                </div>
-                <div class="swiper-slide catalog-item">
-                    <div class="catalog-item__img">
-                        <img src="assets/catalog-item.jpg" alt="">
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door3-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
                     </div>
-                    <span class="catalog-item__title">Стекло с пленкой Oracle
-                    </span>
-                </div>
-                <div class="swiper-slide catalog-item">
-                    <div class="catalog-item__img">
-                        <img src="assets/catalog-item.jpg" alt="">
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door4-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
                     </div>
-                    <span class="catalog-item__title">Стекло с пленкой Oracle
-                    </span>
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door2-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
+                    </div>
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door2-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
+                    </div>
+                    <div class="swiper-slide catalog-item">
+                        <div class="catalog-item__img">
+                            <img src="assets/inside-door2-desc.jpg" alt="">
+                        </div>
+                        <span class="catalog-item__title">Стекло с пленкой Oracle
+                        </span>
+                    </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>        
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>        
-        </div>
+        </div>        
         <div class="container">
             <button class="btn">Расчитать стоимость</button>
         </div>
@@ -596,18 +634,20 @@
             <h2 class="functions__title">Мы проектируем 
                 функциональные гардеробные</h2>
             <hr>
-            <span class="functions__text">Нами спроектировано более 270 гардеробных</span>
-            <div class="functions__item">
-                <img src="assets/functions-1.jpg" alt="" class="functions__img">
-                <span class="functions__text">Максимальное использование пространства более 270 гардеробных</span>
-            </div>
-            <div class="functions__item">
-                <img src="assets/functions-2.jpg" alt="" class="functions__img">
-                <span class="functions__text">Собственное производство</span>
-            </div>
-            <div class="functions__item">
-                <img src="assets/functions-3.jpg" alt="" class="functions__img">
-                <span class="functions__text">Опытные дизайнеры и установщики</span>
+            <div class="functions__flex-desk">
+                <span class="functions__text">Нами спроектировано более 270 гардеробных</span>
+                <div class="functions__item">
+                    <img src="assets/functions-1.jpg" alt="" class="functions__img">
+                    <span class="functions__text">Максимальное использование пространства более 270 гардеробных</span>
+                </div>
+                <div class="functions__item">
+                    <img src="assets/functions-2.jpg" alt="" class="functions__img">
+                    <span class="functions__text">Собственное производство</span>
+                </div>
+                <div class="functions__item">
+                    <img src="assets/functions-3.jpg" alt="" class="functions__img">
+                    <span class="functions__text">Опытные дизайнеры и установщики</span>
+                </div>
             </div>
         </div>
     </section>
@@ -616,6 +656,21 @@
             <h2 class="block-form__title">Заполните форму</h2>
             <div class="block-form__text">Рассчитайте за 1 минуту стоимость шкафа-купе или гардеробной системы и получите итоговую цену в смс</div>
             <button class="btn">расчитать стоимость</button>
+            <form action="" class="form under-insta-form">
+                <div class="form__block">
+                    <label for="form_insta-name" class="form__label">Имя</label>
+                    <input type="text" name="name" id="form_insta-name" placeholder="Иван">    
+                </div>
+                <div class="form__block">
+                    <label for="form_insta-phone" class="form__label">Телефон</label>
+                    <input type="tel" name="phone" id="form_insta-phone" placeholder="+7">    
+                </div>
+                <div class="form__block">
+                    <button type="submit" class="btn">оставить заявку</button>
+                    <span class="form__polite">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</span>
+                </div>
+                   
+            </form>
         </div>        
     </section>
     <section class="sertificat">

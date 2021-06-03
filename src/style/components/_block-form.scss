@@ -1,5 +1,9 @@
 .block-form{
     background: #373737;
+    
+    @include desk{
+        background: linear-gradient(180deg, rgba(55,55,55,1) 80%, rgba(255,255,255,1) 80%); 
+    }
 
     .container{
         padding-bottom: 6rem;
@@ -11,6 +15,10 @@
         color: white;
         margin-bottom: 3rem;
         text-align: center;
+
+        @include desk{
+           text-align: left; 
+        }
     }
 
     &__text{
@@ -19,5 +27,60 @@
         text-align: center;
         line-height: 3rem;
         margin-bottom: 3.5rem;
+
+        @include desk{
+           text-align: left; 
+        }
+    }
+
+    &__button{
+
+        @include desk{
+           display: none; 
+        }
+    }
+
+    .container > .btn{
+        @include desk{
+           display: none; 
+        }
+    }
+    
+}
+
+.under-insta-form{
+    display: none;
+
+    @include desk{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: white;
+        height: 240px;
+        padding: 5.8rem 5rem 0;
+        border: 1px solid #C4C4C4;
+        border-radius: 5px;
+
+        input{
+            width: 345px;
+        }
+
+        .btn{
+            width: 345px;
+            height: 45px;
+            margin-top: 3.3rem;
+        }
+
+        .form__polite{
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            display: block;
+            width: 345px;
+            margin-top: 2rem;
+        }
+
+        .form__block{
+            margin: 0;
+        }
     }
 }

@@ -5,10 +5,11 @@ const swiperCatalog = new Swiper('.catalog__slider', {
   spaceBetween: 30,
   freeMode: true,
   breakpoints: {
-      // when window width is >= 320px
+      // when window width is >= 1200px
       1200: {
-        slidesPerView: 2.5,
-        spaceBetween: 30
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        watchSlidesVisibility: true
       }
     },
 
@@ -23,12 +24,14 @@ const swiperSertificat = new Swiper('.inside-door__swiper', {
   slidesPerView: 1.5,
   spaceBetween: 30,
   freeMode: true,
-  // breakpoints: {
-  //     // when window width is >= 320px
-  //     320: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20
-  //     },
+  breakpoints: {
+    // when window width is >= 1200px
+    1200: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      watchSlidesVisibility: true
+    }
+  },
 
   // Navigation arrows
   navigation: {

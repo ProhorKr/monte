@@ -44,6 +44,18 @@
         @include desk{
            width: 620px; 
            border: 2px solid #c4c4c4;
+           display: flex;
+            flex-wrap: wrap;
+            padding: 6rem 5rem;
+
+            .form__block{
+                width: 235px;
+                margin-top: 0;
+
+                &:nth-child(odd){
+                    margin-right: 3rem;
+                }
+            }
         }
     }
 }

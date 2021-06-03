@@ -3,24 +3,9 @@
     padding-right: 2rem;
     padding-bottom: 1.2rem;
 
-    @include desk{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 6rem 5rem;
-    }
-
     &__block{
         margin-bottom: 3rem;
         margin-top: 3rem;
-
-        @include desk{
-            width: 235px;
-            margin-top: 0;
-
-            &:nth-child(odd){
-                margin-right: 3rem;
-            }
-        }
     }
 
     &__label{

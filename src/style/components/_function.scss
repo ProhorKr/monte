@@ -5,6 +5,7 @@
 
     .container{
         padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     &__title{
@@ -20,10 +21,20 @@
         font-size: 2rem;
         line-height: 3rem;
         color: $textNormal;
+
+        @include desk{
+            display: block;
+            width: 280px;
+        }
     }
 
     &__item{
         margin-top: 3rem;
+
+        @include desk{
+            width: 280px;
+            margin-top: 0;
+        }
 
         img{
             max-width: 100%;
@@ -34,6 +45,16 @@
         span{
             font-size: 1.9rem;
             line-height: 2.5rem;
+        }
+    }
+
+    &__flex-desk{
+
+        @include desk{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6rem;
+
         }
     }
 }

@@ -31,5 +31,10 @@
 
     .swiper-button-disabled{
         display: none;
+
+        @include desk{
+            display: flex;
+            opacity: 1;
+        }
     }
 }

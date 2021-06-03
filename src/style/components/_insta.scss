@@ -2,12 +2,14 @@
 
     @include desk{
        background: #F5F5F5; 
+       margin-top: 7rem;
     }
 
     .container{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        padding-top: 3rem;
     }
 
     &__title{
