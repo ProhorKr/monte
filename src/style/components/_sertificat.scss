@@ -3,4 +3,12 @@
     &__title{
         text-align: left;
     }
+
+    &__item{
+
+        @include desk{
+            max-width: 300px;
+            width: auto;
+        }
+    }
 }
