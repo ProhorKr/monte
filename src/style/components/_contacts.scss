@@ -1,5 +1,9 @@
 .contacts{
 
+    @include desk{
+       display: flex; 
+    }
+
     .container{
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -8,6 +12,16 @@
     &__block-text{
         background: #373737;
 
+        @include desk{
+            width: 50%;
+
+            .container{
+                width: 500px;
+                margin: 0;
+                margin-left: auto;
+                margin-right: 9rem;
+            }
+        }
     }
 
     &__title{
@@ -24,10 +38,24 @@
         font-size: 1.6rem;
         line-height: 2.2rem;
         margin-top: 2rem;
+
+        @include desk{
+            grid-template-columns: 95px 300px;
+        }
     }
 
     &__text-descriptiton{
         font-weight: bold;
+    }
+
+    &__map{
+        width: 360px;
+        height: 400px;
+
+        @include desk{
+            width: 50%;
+            height: auto;
+        }
     }
 
     .btn{

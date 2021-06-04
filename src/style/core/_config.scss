@@ -97,6 +97,11 @@ $containerMobile: 330px;
     &:hover{
         background: $primaryHover;
     }
+
+    @include desk{
+        padding: 1.7rem 2.4rem;
+        width: auto;
+    }
 }
 
 h1{
