@@ -19,7 +19,8 @@
         margin-bottom: 3rem;
 
         @include desk{
-           grid-area: logo; 
+           grid-area: logo;
+           justify-content: flex-start; 
         }
 
         img{
@@ -36,6 +37,7 @@
         @include desk{
             grid-area: text; 
             padding-top: 3rem;
+            text-align: left;
          }
     }
 
@@ -100,6 +102,7 @@
 
         @include desk{
            grid-area: copy; 
+           text-align: left;
         }
     }
 

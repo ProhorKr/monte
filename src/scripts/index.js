@@ -7,4 +7,5 @@ import './carousel'
 import './accordeon'
 import './modal'
 import './map'
+import './maskInput'
 

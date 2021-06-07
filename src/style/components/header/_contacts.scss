@@ -2,6 +2,9 @@
 
     @include desk{
         order: 4;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        display: flex;
     }
     .phone{
         color: $textNormal;

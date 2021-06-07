@@ -19,11 +19,15 @@
         background: #F1F1F1;
         border-radius: 5px;
         outline: none;
-        color: #999999;
+        color: $textDark;
         padding: 1.4rem 1.2rem 1.1rem;
         border: none;
         width: 100%;
         font-size: 1.6rem;
+
+        &:placeholder{
+            color: #999999;
+        }
     }
 
     select{

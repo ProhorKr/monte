@@ -76,6 +76,7 @@
     }
 
     &__form-block{
+        display: none;
 
         @include desk{
             width: 600px;

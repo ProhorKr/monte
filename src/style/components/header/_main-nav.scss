@@ -4,6 +4,7 @@
     order: 2;
     display: flex;
     align-items: center;
+    margin-left: 5rem;
   }
 
   &__open{
@@ -101,12 +102,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+
     }
   }
 
   &__item{
     list-style: none;
+    margin-right: 2rem;
+
+    &:last-child{
+      margin-right: 0;
+    }
   }
 
   &__link{
