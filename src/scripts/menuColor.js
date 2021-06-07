@@ -5,8 +5,8 @@ const bgColor = '#ffffff'
 
 window.addEventListener('scroll', function() {
     if (pageYOffset > utpHeight) {
-        header.classList.add('.header--gradient')
+        header.classList.remove('header--gradient')
     } else {
-        header.classList.remove('.header--gradient')
+        header.classList.add('header--gradient')
     }
   });

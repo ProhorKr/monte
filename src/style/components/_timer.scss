@@ -79,6 +79,7 @@
         display: none;
 
         @include desk{
+            display: block;
             width: 600px;
             background: white;
             padding: 6rem 5rem;
