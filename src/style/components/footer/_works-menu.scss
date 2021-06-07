@@ -1,0 +1,38 @@
+.works-menu{
+    display: none;
+
+    @include desk{
+        display: block;
+    
+
+        &__list{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 445px;
+            margin-left: 5rem;
+        }
+
+        &__item{
+            margin-bottom: 3rem;
+
+            &:nth-last-of-type(-n+2){
+                margin-bottom: 0;
+            }
+        }
+
+        &__link{
+            text-decoration: none;
+            color: $textDark;
+            font-size: 1.6rem;
+            display: block;
+            min-width: 158px;
+            white-space: nowrap;
+
+            &:hover{
+                color: #744691;
+            }
+        }
+    }
+}

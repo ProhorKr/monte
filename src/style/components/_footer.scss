@@ -1,4 +1,11 @@
+@import 'footer/works-menu';
+
 .footer{
+
+    @include desk{
+       background: #f5f5f5;
+
+    }
 
     .container{
         padding: 4rem 0;
@@ -11,6 +18,10 @@
         height: 65px;
         margin-bottom: 3rem;
 
+        @include desk{
+           grid-area: logo; 
+        }
+
         img{
             max-width: 100%;
             max-height: 100%;
@@ -21,6 +32,11 @@
         font-size: 1.6rem;
         line-height: 2.2rem;
         text-align: center;
+
+        @include desk{
+            grid-area: text; 
+            padding-top: 3rem;
+         }
     }
 
     hr{
@@ -33,6 +49,10 @@
         grid-template-columns: 185px 105px;
         column-gap: 40px;
         margin-bottom: 3rem;
+
+        @include desk{
+            grid-area: contacts-block; 
+         }
     }
 
     &__time{
@@ -77,5 +97,78 @@
         color: $textNormal;
         text-align: center;
         display: block;
+
+        @include desk{
+           grid-area: copy; 
+        }
+    }
+
+    &__desk-block{
+        display: none;
+
+        @include desk{
+           display: flex; 
+           justify-content: space-between;
+           border-bottom: 1px solid #c4c4c4;
+           padding-bottom: 2rem;
+           margin-bottom: 3rem;
+        }
+    }
+
+    &__nav{
+
+        @include desk{
+           order: unset; 
+
+           .main-nav__container{
+               z-index: 0;
+           }
+        }
+    }
+
+    &__social-links{
+
+        @include desk{
+            display: none;
+        }
+
+        &--desk{
+
+            @include desk{
+               display: flex; 
+               width: 84px;
+               justify-content: space-between;
+            }
+        }
+    }
+
+    &__grid-desk{
+
+        @include desk{
+           display: grid; 
+           grid-template-columns: 285px 1fr 220px;
+           grid-template-rows: 60px 1fr 28px;
+           grid-template-areas: "logo work-menu contacts-block"
+                                "text work-menu btn"
+                                "copy work-menu  .";
+
+           hr{
+               display: none;
+           }
+
+           .btn{
+              grid-area: btn; 
+              margin-top: 3rem;
+           }
+        }
+    }
+
+    &__works-menu{
+        display: none;
+
+        @include desk{
+           grid-area: work-menu; 
+           display: block;
+        }
     }
 }
