@@ -1,75 +1,16 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack');
+const autoprefixer = require('autoprefixer');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
-const optimization = () => {
-  const configObj = {
-    splitChunks: {
-      chunks: 'all'
-    }
-  };
-
-  if (isProd) {
-    configObj.minimizer = [
-      new CssMinimizerPlugin(),
-      new TerserWebpackPlugin()
-    ];
-  }
-
-  return configObj;
-};
-
 process.on('warning', (warning) => {
   console.log(warning.stack, ' DATA DEBUG');
 }); 
-
-const plugins = () => {
-  const basePlugins = [
-    new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
-      minify: isProd
-    }),
-    new MiniCssExtractPlugin({
-      filename: `./css/${filename('css')}`
-    }),
-  ];
-
-  if (isProd) {
-    basePlugins.push(
-      new ImageminPlugin({
-        bail: false, // Ignore errors on corrupted images
-        cache: true,
-        imageminOptions: {
-          plugins: [
-            ["gifsicle", { interlaced: true }],
-            ["jpegtran", { progressive: true }],
-            ["optipng", { optimizationLevel: 5 }],
-            [
-              "svgo",
-              {
-                plugins: [
-                  {
-                    removeViewBox: false
-                  }
-                ]
-              }
-            ]
-          ]
-        }
-      })
-    )
-  }
-
-  return basePlugins;
-};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -88,8 +29,20 @@ module.exports = {
     port: 8080,
   },
   target: 'web',
-  optimization: optimization(),
-  plugins: plugins(),
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
+    minimize: false
+  },
+  plugins: [
+      new HTMLWebpackPlugin({
+        template: path.resolve(__dirname, 'src/index.html'),
+      }),
+      new MiniCssExtractPlugin({
+        filename: `./css/${filename('css')}`
+      }),
+  ],
   devtool: isProd ? false : 'source-map',
   module: {
     rules: [
@@ -106,8 +59,7 @@ module.exports = {
               hmr: isDev
             },
           },
-          'css-loader',
-          'postcss-loader'
+          'css-loader'
         ],
       },
       {

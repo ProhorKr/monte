@@ -131,6 +131,14 @@
 
       &:hover{
         color: $primaryHover;
+
+        &.main-nav__link--special-calc::before{
+          background-image: url('/assets/calc-zamer_hover.svg');
+        }
+        &.main-nav__link--special-architect::before{
+          background-image: url('/assets/architect_hover.svg');
+        }
+
       }
     }
 
@@ -154,17 +162,9 @@
         position: absolute;
         display: block;
         left: 0;
+        
       }
 
-      &:hover{
-        &-calc::before{
-          background-image: url('/assets/calc-zamer_hover.svg');
-        }
-
-        &-architect::before{
-          background-image: url('/assets/calc-zamer_hover.svg');
-        }
-      }
       &-calc::before{
         background-image: url('/assets/calc-zamer.svg');
       }
@@ -192,6 +192,11 @@
   &__phone{
     font-size: 2rem;
     margin-top: 1rem;
+
+    a{
+      color: $textDark;
+      text-decoration: none;
+    }
   }
 
   &__social-links{

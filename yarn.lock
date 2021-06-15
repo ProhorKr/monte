@@ -1479,15 +1479,15 @@
   "resolved" "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz"
   "version" "2.1.2"
 
-"autoprefixer@^10.2.5":
-  "integrity" "sha512-7H4AJZXvSsn62SqZyJCP+1AWwOuoYpUfK6ot9vm0e87XD6mT8lDywc9D9OTJPMULyGcvmIxzTAMeG2Cc+YX+fA=="
-  "resolved" "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.2.5.tgz"
-  "version" "10.2.5"
+"autoprefixer@^10.2.6":
+  "integrity" "sha512-8lChSmdU6dCNMCQopIf4Pe5kipkAGj/fvTMslCsih0uHpOrXOPUEVOmYMMqmw3cekQkSD7EhIeuYl5y0BLdKqg=="
+  "resolved" "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.2.6.tgz"
+  "version" "10.2.6"
   dependencies:
-    "browserslist" "^4.16.3"
-    "caniuse-lite" "^1.0.30001196"
+    "browserslist" "^4.16.6"
+    "caniuse-lite" "^1.0.30001230"
     "colorette" "^1.2.2"
-    "fraction.js" "^4.0.13"
+    "fraction.js" "^4.1.1"
     "normalize-range" "^0.1.2"
     "postcss-value-parser" "^4.1.0"
 
@@ -1749,7 +1749,7 @@
   dependencies:
     "fill-range" "^7.0.1"
 
-"browserslist@^4.0.0", "browserslist@^4.12.0", "browserslist@^4.14.5", "browserslist@^4.16.0", "browserslist@^4.16.3", "browserslist@^4.16.6":
+"browserslist@^4.0.0", "browserslist@^4.12.0", "browserslist@^4.14.5", "browserslist@^4.16.0", "browserslist@^4.16.6":
   "integrity" "sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ=="
   "resolved" "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.6.tgz"
   "version" "4.16.6"
@@ -1949,15 +1949,10 @@
     "lodash.memoize" "^4.1.2"
     "lodash.uniq" "^4.5.0"
 
-"caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001219":
-  "integrity" "sha512-k/RYs6zc/fjbxTjaWZemeSmOjO0JJV+KguOBA3NwPup8uzxM1cMhR2BD9XmO86GuqaqTCO8CgkgH9Rz//vdDiA=="
-  "resolved" "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001223.tgz"
-  "version" "1.0.30001223"
-
-"caniuse-lite@^1.0.30001196":
-  "integrity" "sha512-QQmLOGJ3DEgokHbMSA8cj2a+geXqmnpyOFT0lhQV6P3/YOJvGDEwoedcwxEQ30gJIwIIunHIicunJ2rzK5gB2A=="
-  "resolved" "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001228.tgz"
-  "version" "1.0.30001228"
+"caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001219", "caniuse-lite@^1.0.30001230":
+  "integrity" "sha512-o0PRQSrSCGJKCPZcgMzl5fUaj5xHe8qA2m4QRvnyY4e1lITqoNkr7q/Oh1NcpGSy0Th97UZ35yoKcINPoq7YOQ=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001236.tgz"
+  "version" "1.0.30001236"
 
 "caseless@~0.12.0":
   "integrity" "sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw="
@@ -3641,10 +3636,10 @@
   "resolved" "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz"
   "version" "0.1.2"
 
-"fraction.js@^4.0.13":
-  "integrity" "sha512-E1fz2Xs9ltlUp+qbiyx9wmt2n9dRzPsS11Jtdb8D2o+cC7wr9xkkKsVKJuBX0ST+LVS+LhLO+SbLJNtfWcJvXA=="
-  "resolved" "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.13.tgz"
-  "version" "4.0.13"
+"fraction.js@^4.1.1":
+  "integrity" "sha512-MHOhvvxHTfRFpF1geTK9czMIZ6xclsEor2wkIGYYq+PxcQqT7vStJqjhe6S1TenZrMZzo+wlqOufBDVepUEgPg=="
+  "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.1.1.tgz"
+  "version" "4.1.1"
 
 "fragment-cache@^0.2.1":
   "integrity" "sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk="
@@ -6519,10 +6514,10 @@
   dependencies:
     "postcss" "^7.0.14"
 
-"postcss-loader@^5.2.0":
-  "integrity" "sha512-uSuCkENFeUaOYsKrXm0eNNgVIxc71z8RcckLMbVw473rGojFnrUeqEz6zBgXsH2q1EIzXnO/4pEz9RhALjlITA=="
-  "resolved" "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-5.2.0.tgz"
-  "version" "5.2.0"
+"postcss-loader@^5.3.0":
+  "integrity" "sha512-/+Z1RAmssdiSLgIZwnJHwBMnlABPgF7giYzTN2NOfr9D21IJZ4mQC1R2miwp80zno9M4zMD/umGI8cR+2EL5zw=="
+  "resolved" "https://registry.npmjs.org/postcss-loader/-/postcss-loader-5.3.0.tgz"
+  "version" "5.3.0"
   dependencies:
     "cosmiconfig" "^7.0.0"
     "klona" "^2.0.4"

@@ -28,6 +28,14 @@
         &:placeholder{
             color: #999999;
         }
+
+        &:focus{
+            border: 1px solid #444444;
+            box-sizing: border-box; 
+        }
+
+
+
     }
 
     select{

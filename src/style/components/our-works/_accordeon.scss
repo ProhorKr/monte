@@ -27,7 +27,7 @@
         max-height: 0;
         // visibility: hidden;
         // opacity: 0;
-        transition: max-height 0.3s linear;
+        // transition: max-height 0.3s linear;
         overflow: hidden;
 
         @include desk{
@@ -54,6 +54,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include desk{
+           font-size: 3rem; 
+        }
 
         &::after{
             content: '';

@@ -20,13 +20,28 @@
         &::before{
             content: '';
         }
+
     }
 
     .swiper-button-next{
         background: #fff url('../assets/arrowNext.svg') no-repeat center center;
+
+        &:hover{
+
+            @include desk{
+                background: #303030 url('../assets/arrowNext_white.svg') no-repeat center center;
+            }
+        }
     }
     .swiper-button-prev{
         background: #fff url('../assets/arrowPrev.svg') no-repeat center center;
+
+        &:hover{
+
+            @include desk{
+                background: #303030 url('../assets/arrowPrev_white.svg') no-repeat center center;
+            }
+        }
     }
 
     .swiper-button-disabled{
@@ -34,7 +49,7 @@
 
         @include desk{
             display: flex;
-            opacity: 1;
+            opacity: 0.7;
         }
     }
 }
