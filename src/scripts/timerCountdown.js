@@ -7,15 +7,16 @@ let date,
 		startTimer = '';
 
 // calculate date, hour, minute and second
-function calcTime(dates) {
+function calcTime() {
 	//ui variables
 	clearInterval(startTimer);
 
 	
-	date = new Date(dates).getTime();
+	date = new Date()
+	date = new Date(date.getFullYear(), date.getMonth(), date.getDate()+1)
 	
 
-	function updateTimer(date){
+	function updateTimer(nextDate){
 
 		let now = new Date().getTime();
 		let distance = date - now;
@@ -38,5 +39,5 @@ function calcTime(dates) {
 }
 
 
-calcTime('2021-06-26')
+calcTime()
 
